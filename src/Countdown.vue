@@ -77,7 +77,7 @@ export default {
     },
     filters: {
         twoDigits: function (value) {
-            if (value.length == 1) {
+            if (value >= 0 && value <= 9) {
                 return '0'+value;
             } else {
                 return value;
