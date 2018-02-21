@@ -74,6 +74,15 @@ export default {
                 clearInterval(interval);
             }
         }
+    },
+    filters: {
+        twoDigits: function (value) {
+            if (value.length == 1) {
+                return '0'+value;
+            } else {
+                return value;
+            }
+        }
     }
 }
 </script>
@@ -108,8 +117,8 @@ export default {
   content: "";
 }
 .vue-countdown .digit {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 500;
   line-height: 1.4;
   margin-bottom: 0;
 }
